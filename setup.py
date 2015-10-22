@@ -9,6 +9,10 @@ import setuptools
 from setuptools.command.test import test as TestCommand
 from setuptools import setup
 
+# use io.open() in python 2
+if sys.version_info[0] == 2:
+    from io import open
+
 __location__ = os.path.join(os.getcwd(), os.path.dirname(inspect.getfile(inspect.currentframe())))
 
 
